@@ -8,7 +8,6 @@ public class Grade {
     private double grade;
     private LocalDate dateRecorded;
 
-    // Fields for display purposes
     private String courseName;
     private String studentName;
 

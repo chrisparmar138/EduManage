@@ -5,8 +5,8 @@ public class User {
     private String username;
     private String password;
     private UserRole role;
-    private int studentId; // Changed from Integer to int
-    private int teacherId; // Changed from Integer to int
+    private int studentId; 
+    private int teacherId; 
 
     public enum UserRole {
         ADMIN,

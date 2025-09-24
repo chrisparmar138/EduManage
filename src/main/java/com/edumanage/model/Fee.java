@@ -12,8 +12,8 @@ public class Fee {
     private FeeStatus status;
     private LocalDate paymentDate;
     private String studentName;
-
-    // Enum for fee status
+    
+    
     public enum FeeStatus {
         PAID,
         UNPAID

@@ -14,7 +14,6 @@ public class Student {
     public Student() {
     }
 
-    // New constructor that was missing
     public Student(int studentId, String firstName, String lastName, LocalDate dateOfBirth, String email, LocalDate admissionDate) {
         this.studentId = studentId;
         this.firstName = firstName;

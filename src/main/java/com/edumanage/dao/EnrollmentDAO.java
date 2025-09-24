@@ -16,6 +16,7 @@ public class EnrollmentDAO {
 
     public List<Enrollment> getAllEnrollments() {
         List<Enrollment> enrollmentList = new ArrayList<>();
+        
         // This query joins the necessary tables to get student and course names
         String sql = "SELECT e.*, s.first_name, s.last_name, c.course_name " +
                 "FROM enrollments e " +
@@ -65,7 +66,6 @@ public class EnrollmentDAO {
         }
     }
 
-    // Other methods for teacher/student views
     public List<Enrollment> getStudentsByTeacherId(int teacherId) {
         List<Enrollment> enrollmentList = new ArrayList<>();
         // Implementation for teacher view...

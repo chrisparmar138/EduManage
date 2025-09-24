@@ -6,7 +6,7 @@ public class Course {
     private String courseCode;
     private int credits;
     private int teacherId;
-    private String teacherName; // Used for display
+    private String teacherName;
 
     // Default constructor
     public Course() {

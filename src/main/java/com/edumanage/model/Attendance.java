@@ -6,7 +6,7 @@ public class Attendance {
     private int attendanceId;
     private int enrollmentId;
     private LocalDate attendanceDate;
-    private AttendanceStatus status; // Changed from String to enum
+    private AttendanceStatus status;
     private String courseName;
 
     // The enum should be defined inside the class

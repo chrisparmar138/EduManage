@@ -13,7 +13,6 @@ public class Teacher {
     public Teacher() {
     }
 
-    // New constructor that was missing
     public Teacher(int teacherId, String firstName, String lastName, String email, LocalDate hireDate) {
         this.teacherId = teacherId;
         this.firstName = firstName;

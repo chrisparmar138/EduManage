@@ -13,8 +13,7 @@ public class Enrollment {
     // Default constructor
     public Enrollment() {
     }
-
-    // New constructor that was missing
+    
     public Enrollment(int enrollmentId, int studentId, int courseId, LocalDate enrollmentDate, String studentName, String courseName) {
         this.enrollmentId = enrollmentId;
         this.studentId = studentId;
