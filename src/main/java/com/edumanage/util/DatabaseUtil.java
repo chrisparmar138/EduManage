@@ -17,7 +17,7 @@ public class DatabaseUtil {
 
     // IMPORTANT: Replace these with your actual PostgreSQL username and password.
     private static final String USER = "postgres";
-    private static final String PASS = "Naresh138";
+    private static final String PASS = "*****";
 
     /**
      * Attempts to establish a connection with the database.
