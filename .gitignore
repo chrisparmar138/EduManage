@@ -1,0 +1,10 @@
+# Ignore .env file (contains secrets)
+.env
+
+# Ignore build output
+/target/
+
+# IDE-specific files
+.idea/
+*.iml
+*.class

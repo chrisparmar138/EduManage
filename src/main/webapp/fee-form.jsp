@@ -1,0 +1,56 @@
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+
+<c:set var="pageTitle" value="Add New Fee Record" scope="request" />
+<jsp:include page="/common/header.jsp" />
+
+<div class="card">
+    <div class="card-body">
+        <div class="d-flex justify-content-between align-items-center mb-3">
+            <h1 class="card-title">Add New Fee Record</h1>
+            <a href="${pageContext.request.contextPath}/fees" class="btn btn-secondary">Back to List</a>
+        </div>
+        <hr>
+
+        <form action="${pageContext.request.contextPath}/fees/insert" method="post">
+
+            <div class="mb-3">
+                <label for="studentId" class="form-label">Select Student</label>
+                <select class="form-select" id="studentId" name="studentId" required>
+                    <option value="">-- Choose a Student --</option>
+                    <c:forEach var="student" items="${studentList}">
+                        <option value="${student.studentId}">
+                            <c:out value="${student.firstName} ${student.lastName}" />
+                        </option>
+                    </c:forEach>
+                </select>
+            </div>
+
+            <div class="mb-3">
+                <label for="description" class="form-label">Description</label>
+                <input type="text" class="form-control" id="description" name="description" placeholder="e.g., Spring Semester Tuition" required>
+            </div>
+
+            <div class="row">
+                <div class="col-md-6 mb-3">
+                    <label for="amount" class="form-label">Amount Due</label>
+                    <div class="input-group">
+                        <span class="input-group-text">$</span>
+                        <input type="number" class="form-control" id="amount" name="amount" step="0.01" min="0" required>
+                    </div>
+                </div>
+                <div class="col-md-6 mb-3">
+                    <label for="dueDate" class="form-label">Due Date</label>
+                    <input type="date" class="form-control" id="dueDate" name="dueDate" required>
+                </div>
+            </div>
+
+            <div class="d-flex justify-content-end mt-4">
+                <button type="submit" class="btn btn-primary">Save Fee Record</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<jsp:include page="/common/footer.jsp" />
+
